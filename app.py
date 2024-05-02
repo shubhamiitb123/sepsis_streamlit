@@ -54,11 +54,11 @@ uploaded_file = st.file_uploader("Upload a PSV file", type=["psv"])
 
 import pandas as pd
 
-ip=pd.read_csv(uploaded_file,sep='|')
-st.write(ip.head())
 
 if uploaded_file is not None:
     # Display uploaded file
+    ip=pd.read_csv(uploaded_file,sep='|')
+    st.write(ip.head())
     st.write('File Uploaded Successfully!')
 
     # Button to generate predictions
